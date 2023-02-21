@@ -9,6 +9,7 @@
 # R version: R 4.2.1 GUI RStudio 2022.07.2 Build 576
 #   OS: macOS Monterey 12.6 (21G115)
 
+library(stringr)
 library(tidymodels)
 library(rcompanion)
 library(ggcorrplot)
@@ -316,7 +317,7 @@ colnames(corr_mat) <- new_names
 
 corr_plot <- ggcorrplot(corr_mat, tl.cex = 6)
 
-ggsave("corr-plot.jpg",
+ggsave("corr-plot.pdf",
        corr_plot,
        dpi = 300,
        width = 10,
